@@ -42,6 +42,16 @@ export const constantRoutes = [
     component: () => import('@/views/404'),
     hidden: true
   },
+  {
+    path: '/personal',
+    component: Layout,
+    children: [{
+      path: 'index',
+      name: 'Personal',
+      component: () => import('@/views/personal/index'),
+      meta: { title: '个人中心', icon: 'el-icon-user-solid' }
+    }]
+  },
 
   {
     path: '/',
